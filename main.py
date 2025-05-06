@@ -30,7 +30,7 @@ def login(data: LoginData):
             raise HTTPException(status_code=401, detail="email ou senha incorretos.")
         
     except sqlite3.Error as e:
-        raise HTTPException(status_coee=500, detail=f"Erro no banco de dados: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Erro no banco de dados: {str(e)}")
     
     finally:
         conexao_banco.close()
